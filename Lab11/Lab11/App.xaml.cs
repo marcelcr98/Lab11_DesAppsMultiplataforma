@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Lab11.Views;
+using System;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -10,7 +11,7 @@ namespace Lab11
         {
             InitializeComponent();
 
-            MainPage = new MainPage();
+            MainPage = new Operaciones();
         }
 
         protected override void OnStart()
