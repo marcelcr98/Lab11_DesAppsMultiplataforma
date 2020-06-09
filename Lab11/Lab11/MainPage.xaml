@@ -7,10 +7,10 @@
              x:Class="Lab11.MainPage">
 
     <StackLayout>
-        <!-- Place new controls here -->
-        <Label Text="Welcome to Xamarin.Forms!" 
-           HorizontalOptions="Center"
-           VerticalOptions="CenterAndExpand" />
+        <Button x:Name="Item11" Text="Simple ViewModel"/>
+        <Button x:Name="Item12" Text="Interactive ViewModel"/>
+        <Button x:Name="Item13" Text="Command ViewModel"/>
+        <Button x:Name="Item14" Text="Operaciones"/>
     </StackLayout>
 
 </ContentPage>

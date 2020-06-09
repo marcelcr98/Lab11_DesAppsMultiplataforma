@@ -6,91 +6,32 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
              x:Class="Lab11.Views.Operaciones">
+    <ContentPage.Content>
+        <StackLayout StyleClass="outer">
+            <Label Text="CALCULADORA"></Label>
+            <StackLayout Orientation="Horizontal" >
+                <Label Text="Valor 1"/>
+                <Editor Text="{Binding Valor1}" ></Editor>
+                <Label Text="Valor 2"/>
+                <Editor Text="{Binding Valor2}" ></Editor>
+            </StackLayout>
+            <StackLayout Orientation="Horizontal">
+                <Button Text="Sumar" Command="{Binding Sumar}"/>
+                <Label Text="{Binding ResultSuma}"/>
+            </StackLayout>
+            <StackLayout Orientation="Horizontal">
+                <Button Text="Restar" Command="{Binding Restar}"/>
+                <Label Text="{Binding ResultResta}"/>
+            </StackLayout>
+            <StackLayout Orientation="Horizontal">
+                <Button Text="Multiplicar" Command="{Binding Multiplicar}"/>
+                <Label Text="{Binding ResultMultiplicar}"/>
+            </StackLayout>
+            <StackLayout Orientation="Horizontal">
+                <Button Text="Dividir" Command="{Binding Dividir}"/>
+                <Label Text="{Binding ResultDividir}"/>
+            </StackLayout>
+        </StackLayout>
 
-    <ContentPage.Padding>
-        <OnPlatform x:TypeArguments="Thickness">
-            <OnPlatform.iOS>0,20,0,0</OnPlatform.iOS>
-        </OnPlatform>
-    </ContentPage.Padding>
-
-    <Grid Padding="5,0" RowSpacing="1" ColumnSpacing="1" BackgroundColor="Black">
-
-        <Grid.RowDefinitions>
-            <RowDefinition Height="2*" />
-            <RowDefinition Height="*" />
-            <RowDefinition Height="*" />
-            <RowDefinition Height="*" />
-            <RowDefinition Height="*" />
-            <RowDefinition Height="*" />
-        </Grid.RowDefinitions>
-
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="*" />
-            <ColumnDefinition Width="*" />
-            <ColumnDefinition Width="*" />
-            <ColumnDefinition Width="*" />
-        </Grid.ColumnDefinitions>
-
-        <Label x:Name="resultText" FontSize="48" FontAttributes="Bold" BackgroundColor="Black" Text="0"
-              TextColor="White" HorizontalTextAlignment="End" VerticalTextAlignment="Center"
-              LineBreakMode="NoWrap" Grid.ColumnSpan="4" />
-
-
-
-        <Button Text="1" Grid.Row="1" Grid.Column="0"
-               BackgroundColor="White" TextColor="Black"
-               FontSize="36" BorderRadius="0"/>
-        <Button Text="2" Grid.Row="1" Grid.Column="1"
-               BackgroundColor="White" TextColor="Black"
-               FontSize="36" BorderRadius="0" />
-        <Button Text="3" Grid.Row="1" Grid.Column="2"
-               BackgroundColor="White" TextColor="Black"
-               FontSize="36" BorderRadius="0"  />
-        <Button Text="0" Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="3"
-               BackgroundColor="White" TextColor="Black"
-               FontSize="36" BorderRadius="0" />
-
-        <Button Text="4" Grid.Row="2" Grid.Column="0"
-               BackgroundColor="White" TextColor="Black"
-               FontSize="36" BorderRadius="0"  />
-        <Button Text="5" Grid.Row="2" Grid.Column="1"
-               BackgroundColor="White" TextColor="Black"
-               FontSize="36" BorderRadius="0" />
-        <Button Text="6" Grid.Row="2" Grid.Column="2"
-               BackgroundColor="White" TextColor="Black"
-               FontSize="36" BorderRadius="0"  />
-
-        <Button Text="7" Grid.Row="3" Grid.Column="0"
-               BackgroundColor="White" TextColor="Black"
-               FontSize="36" BorderRadius="0"  />
-        <Button Text="8" Grid.Row="3" Grid.Column="1"
-               BackgroundColor="White" TextColor="Black"
-               FontSize="36" BorderRadius="0"  />
-        <Button Text="9" Grid.Row="3" Grid.Column="2"
-               BackgroundColor="White" TextColor="Black"
-               FontSize="36" BorderRadius="0"  />
-
-
-        <Button Text="÷" Grid.Row="1" Grid.Column="3"
-                BackgroundColor="{x:Static local:SharedResources.OpButtonBkColor}" TextColor="White"
-                FontSize="36" BorderRadius="0" />
-        <Button Text="×" Grid.Row="2" Grid.Column="3"
-                BackgroundColor="{x:Static local:SharedResources.OpButtonBkColor}" TextColor="White"
-                FontSize="36" BorderRadius="0" />
-        <Button Text="-" Grid.Row="3" Grid.Column="3"
-                BackgroundColor="{x:Static local:SharedResources.OpButtonBkColor}" TextColor="White"
-                FontSize="36" BorderRadius="0"  />
-        <Button Text="+" Grid.Row="4" Grid.Column="3"
-                BackgroundColor="{x:Static local:SharedResources.OpButtonBkColor}" TextColor="White"
-                FontSize="36" BorderRadius="0"  />
-
-        <Button Text="C" Grid.Row="5" Grid.Column="0"
-                BackgroundColor="#808080" TextColor="White"
-                FontSize="36" BorderRadius="0"  />
-
-        <Button Text="=" Grid.Row="5" Grid.Column="1" Grid.ColumnSpan="3"
-                BackgroundColor="{x:Static local:SharedResources.OpButtonBkColor}" TextColor="White"
-                FontSize="36" BorderRadius="0" />
-
-    </Grid>
+    </ContentPage.Content>
 </ContentPage>

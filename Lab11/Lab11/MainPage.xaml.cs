@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Lab11.ModelViews;
+using Lab11.Views;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
@@ -16,6 +18,22 @@ namespace Lab11
         public MainPage()
         {
             InitializeComponent();
+            Item11.Clicked += async (sender, e) =>
+            {
+                await Navigation.PushAsync(new SimpleDemo());
+            };
+            Item12.Clicked += async (sender, e) =>
+            {
+                await Navigation.PushAsync(new InteractiveDemo());
+            };
+            Item13.Clicked += async (sender, e) =>
+            {
+                await Navigation.PushAsync(new CommandDemo());
+            };
+            Item14.Clicked += async (sender, e) =>
+            {
+                await Navigation.PushAsync(new Operaciones());
+            };
         }
     }
 }

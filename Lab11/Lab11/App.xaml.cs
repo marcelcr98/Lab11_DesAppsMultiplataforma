@@ -11,7 +11,7 @@ namespace Lab11
         {
             InitializeComponent();
 
-            MainPage = new Operaciones();
+            MainPage = new NavigationPage(new MainPage());
         }
 
         protected override void OnStart()
