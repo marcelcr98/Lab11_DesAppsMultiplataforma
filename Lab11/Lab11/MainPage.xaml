@@ -11,6 +11,7 @@
         <Button x:Name="Item12" Text="Interactive ViewModel"/>
         <Button x:Name="Item13" Text="Command ViewModel"/>
         <Button x:Name="Item14" Text="Operaciones"/>
+        <Button x:Name="Item15" Text="Basic Calculator"/>
     </StackLayout>
 
 </ContentPage>

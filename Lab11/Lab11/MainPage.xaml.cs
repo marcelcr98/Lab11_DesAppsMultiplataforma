@@ -34,6 +34,10 @@ namespace Lab11
             {
                 await Navigation.PushAsync(new Operaciones());
             };
+            Item14.Clicked += async (sender, e) =>
+            {
+                await Navigation.PushAsync(new BasicCalculator());
+            };
         }
     }
 }
